@@ -1,132 +1,101 @@
 import React from 'react';
+import Hero from '../components/Hero';
+import { Link } from 'react-router-dom';
 
-function About() {
+// Sample data for events, scholarships, and alumni (can be replaced with dynamic data from an API or database)
+const events = [
+  { title: 'Scholarship Workshop', date: 'May 5, 2025', description: 'Learn how to apply for scholarships abroad.' },
+  { title: 'Alumni Networking Event', date: 'June 12, 2025', description: 'Meet and network with SIAS-UIU alumni.' },
+];
+
+const scholarships = [
+  { name: 'Masters Scholarship in USA', description: 'Full funding for masters in any field.' },
+  { name: 'PhD Scholarship in Europe', description: 'PhD funding in environmental sciences.' },
+];
+
+const alumni = [
+  { name: 'John Doe', job: 'Software Engineer at Google', testimonial: 'SIAS-UIU gave me the right tools and network to succeed in my career.' },
+  { name: 'Jane Smith', job: 'Marketing Director at Nike', testimonial: 'Thanks to SIAS-UIU, I found valuable mentorship and career guidance.' },
+];
+
+function Home() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="overflow-hidden bg-white text-black">
+      {/* Hero Section */}
+      <Hero />
 
-      {/* Introduction Section */}
-      <section className="p-12 bg-orange-600 text-white text-center">
-        <h1 className="text-4xl font-bold mb-6">About Students' International Affairs Society (SIAS)</h1>
-        <p className="text-xl leading-relaxed max-w-4xl mx-auto">
-          The Students' International Affairs Society (SIAS) is a dynamic student platform under the Excellency of Centre for International Affairs and Cooperation (CIAC, UIU).
-          SIAS works to empower students of United International University by providing international platforms, aiming to shape them into "Globally Competent Students."
+      
+
+      {/* Scholarships Section */}
+      <section className="py-20 bg-orange-100">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-extrabold text-black mb-6">Available Scholarships</h2>
+          <p className="text-lg max-w-3xl mx-auto text-black">Explore global scholarship opportunities and take the first step towards your academic future.</p>
+        </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+          {scholarships.map((scholarship, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-black mb-2">{scholarship.name}</h3>
+              <p className="text-black">{scholarship.description}</p>
+              <Link to="/scholarships" className="text-orange-600 hover:underline mt-4 block">
+                View Details
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Alumni Section */}
+      <section className="py-20 px-6 bg-white">
+        <h2 className="text-4xl font-extrabold text-center text-black mb-8">Alumni Testimonials</h2>
+        <div className="flex flex-wrap justify-center gap-12">
+          {alumni.map((person, index) => (
+            <div key={index} className="bg-black text-white p-6 rounded-lg shadow-lg max-w-xs">
+              <h3 className="text-2xl font-semibold mb-2">{person.name}</h3>
+              <p className="text-lg">{person.job}</p>
+              <p className="mt-4 text-orange-400">"{person.testimonial}"</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      {/* Resources Section */}
+      <section className="py-20 px-6 bg-black text-white text-center">
+        <h2 className="text-4xl font-extrabold mb-4">Student Resources</h2>
+        <p className="text-lg mb-8">Access valuable resources that will help you with your scholarship applications, career planning, and more.</p>
+        <Link to="/resources" className="bg-orange-600 text-white px-6 py-2 rounded-md hover:bg-orange-700 transition">
+          Explore Resources
+        </Link>
+      </section>
+      {/* Events Section */}
+      <section className="py-20 px-6 bg-orange-100">
+        <h2 className="text-4xl font-extrabold text-center text-black mb-8">Upcoming Events</h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {events.map((event, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-lg">
+              <h3 className="text-2xl font-bold text-black">{event.title}</h3>
+              <p className="text-black">{event.date}</p>
+              <p className="mt-4 text-black">{event.description}</p>
+              <Link to="/events" className="text-orange-600 hover:underline mt-4 block">
+                Learn More
+              </Link>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      
+      {/* About Section */}
+      <section className="py-20 px-6 text-center bg-black text-white">
+        <h2 className="text-4xl font-extrabold mb-4">About SIAS-UIU</h2>
+        <p className="text-lg max-w-4xl mx-auto mb-8">
+          SIAS-UIU is dedicated to helping students at UIU discover global scholarship opportunities, connect with alumni, and engage in meaningful career-building experiences.
         </p>
+        <Link to="/about" className="bg-orange-600 text-white px-6 py-2 rounded-md hover:bg-orange-700 transition">
+          Learn More
+        </Link>
       </section>
-
-      {/* CIAC Director */}
-      <section className="p-12 bg-white text-center">
-        <h2 className="text-3xl font-semibold text-orange-600 mb-8">CIAC Director</h2>
-        <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-semibold text-orange-600">Dr. John Doe</h3>
-          <p className="text-gray-700 text-lg">Director, Centre for International Affairs and Cooperation (CIAC)</p>
-          <p className="mt-4 text-gray-700">
-            Dr. John Doe is a renowned academic leader with a strong passion for global education and student empowerment. Under his leadership, SIAS has become a key player in enhancing students’ international exposure.
-          </p>
-        </div>
-      </section>
-
-      {/* Advisor Panel */}
-      <section className="p-12 bg-orange-100 text-center">
-        <h2 className="text-3xl font-semibold text-orange-600 mb-8">Advisor Panel</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 className="text-2xl font-semibold text-orange-600">Prof. Alice Smith</h3>
-            <p className="text-gray-600">Academic Advisor</p>
-            <p className="mt-4 text-gray-700">Prof. Alice Smith is a distinguished academician and an advocate for global student mobility.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 className="text-2xl font-semibold text-orange-600">Dr. Bob Lee</h3>
-            <p className="text-gray-600">International Relations Advisor</p>
-            <p className="mt-4 text-gray-700">Dr. Bob Lee is an expert in international relations, working closely with SIAS to facilitate global partnerships.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Core Committee Panel */}
-      <section className="p-12 bg-white text-center">
-        <h2 className="text-3xl font-semibold text-orange-600 mb-8">Core Committee Panel</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 className="text-2xl font-semibold text-orange-600">Md Siam Hossain</h3>
-            <p className="text-gray-600">President</p>
-            <p className="mt-4 text-gray-700">A passionate leader working towards enhancing SIAS’s international engagement.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 className="text-2xl font-semibold text-orange-600">John Doe</h3>
-            <p className="text-gray-600">Vice President</p>
-            <p className="mt-4 text-gray-700">Focused on establishing strong networks between students and global institutions.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Secretary Panel */}
-      <section className="p-12 bg-orange-100 text-center">
-        <h2 className="text-3xl font-semibold text-orange-600 mb-8">Secretary Panel</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 className="text-2xl font-semibold text-orange-600">Md Zishan Showdagor</h3>
-            <p className="text-gray-600">Secretary of PR & Media</p>
-            <p className="mt-4 text-gray-700">Leading media relations and content creation for SIAS, ensuring effective communication with external stakeholders.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 className="text-2xl font-semibold text-orange-600">Jane Smith</h3>
-            <p className="text-gray-600">Secretary of Events</p>
-            <p className="mt-4 text-gray-700">Responsible for organizing and coordinating key international events under the guidance of CIAC.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Executive Panel */}
-      <section className="p-12 bg-white text-center">
-        <h2 className="text-3xl font-semibold text-orange-600 mb-8">Executive Panel</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 className="text-2xl font-semibold text-orange-600">Sarah Ahmed</h3>
-            <p className="text-gray-600">Executive Member</p>
-            <p className="mt-4 text-gray-700">An active member involved in international student outreach and partnership building.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 className="text-2xl font-semibold text-orange-600">Ali Rahman</h3>
-            <p className="text-gray-600">Executive Member</p>
-            <p className="mt-4 text-gray-700">Focused on creating international learning opportunities for UIU students.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Notable Alumni */}
-      <section className="p-12 bg-orange-100 text-center">
-        <h2 className="text-3xl font-semibold text-orange-600 mb-8">SIAS Notable Alumni</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 className="text-2xl font-semibold text-orange-600">Shamsul Huda</h3>
-            <p className="text-gray-600">Alumni, Former President</p>
-            <p className="mt-4 text-gray-700">Shamsul Huda has successfully represented SIAS at multiple international student conferences.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 className="text-2xl font-semibold text-orange-600">Nusrat Jahan</h3>
-            <p className="text-gray-600">Alumni, Former Secretary</p>
-            <p className="mt-4 text-gray-700">A leader in international education, Nusrat now works with global education networks.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Events */}
-      <section className="p-12 bg-white text-center">
-        <h2 className="text-3xl font-semibold text-orange-600 mb-8">Featured Events</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 className="text-2xl font-semibold text-orange-600">Global Education Fair</h3>
-            <p className="text-gray-600">An event that connects students with top universities around the world for study opportunities.</p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-            <h3 className="text-2xl font-semibold text-orange-600">International Networking Night</h3>
-            <p className="text-gray-600">A networking event to help students build relationships with international professionals.</p>
-          </div>
-        </div>
-      </section>
-
     </div>
   );
 }
 
-export default About;
+export default Home;
