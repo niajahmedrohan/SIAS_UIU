@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import logo from '../assets/logo.png';
 function Navbar() {
   return (
     <nav className="bg-orange-600 py-4">
       <div className="container mx-auto flex justify-between items-center px-4">
-        <Link to="/" className="text-white text-xl font-bold">SIAS-UIU</Link>
+      <Link to="/" className="flex items-center space-x-3">
+          <img src={logo} alt="SIAS-UIU Logo" className="h-6 w-auto" />
+          <span className="text-xl font-bold text-white"></span>
+        </Link>
         <div>
           <Link to="/" className="text-white px-4 hover:underline">Home</Link>
           <Link to="/about" className="text-white px-4 hover:underline">About</Link>
