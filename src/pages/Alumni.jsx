@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+
+import { FaFacebook, FaLinkedin, FaGlobe, FaMapMarkerAlt, FaCalendarAlt } from 'react-icons/fa'; 
+
 // Sample alumni data with Bengali names and other details
 const alumniData = [
   {
@@ -196,13 +199,23 @@ function Alumni() {
               <h3 className="text-2xl font-semibold text-black">{alumni.name}</h3>
               <p className="text-lg text-black mb-2">{alumni.education}</p>
               <p className="text-lg text-black mb-4">{alumni.currentJob}</p>
-              <p className="text-lg text-black mb-4">Location: {alumni.location}</p>
-              <div className="flex justify-center gap-4">
-                <a href={alumni.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LinkedIn</a>
-                <a href={alumni.portfolio} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Portfolio</a>
-                <a href={alumni.facebook} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Facebook</a>
+              <p className="text-lg text-black mb-4 flex items-center justify-center gap-2">
+  <FaMapMarkerAlt size={18} color="gray" />
+  {alumni.location}
+</p>
+
+              <div className="flex items-center justify-center gap-4">
+                <a href={alumni.linkedin} target="_blank" rel="noopener noreferrer" lassName="text-gray-600 hover:underline">
+                  <FaLinkedin size={24} color="gray" />
+                </a>
+                <a href={alumni.portfolio} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:underline">
+                  <FaGlobe size={24} color="gray" />
+                </a>
+                <a href={alumni.facebook} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:underline">
+                  <FaFacebook size={24} color="gray" />
+                </a>
                 <a href={alumni.calendly} target="_blank" rel="noopener noreferrer" className="bg-orange-600 text-white px-4 py-2 rounded-md hover:bg-orange-700 transition">
-                  Calendly
+                  Book Appointment
                 </a>
               </div>
             </div>

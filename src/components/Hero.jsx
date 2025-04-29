@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { GraduationCap, Users } from 'lucide-react'; // Importing icons
 
 function Hero() {
   return (
@@ -12,11 +13,19 @@ function Hero() {
           Explore worldwide scholarships, connect with successful alumni, and unlock endless academic opportunities with SIAS-UIU.
         </p>
         <div className="flex justify-center gap-6">
-          <Link to="/scholarships" className="bg-white text-orange-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition">
+          <Link
+            to="/scholarships"
+            className="bg-white text-orange-600 font-semibold px-6 py-3 rounded-full hover:bg-gray-100 transition flex items-center gap-2"
+          >
             Explore Scholarships
+            <GraduationCap size={20} />
           </Link>
-          <Link to="/alumni" className="bg-black text-white font-semibold px-6 py-3 rounded-full hover:bg-gray-800 transition">
+          <Link
+            to="/alumni"
+            className="bg-black text-white font-semibold px-6 py-3 rounded-full hover:bg-gray-800 transition flex items-center gap-2"
+          >
             Meet Alumni
+            <Users size={20} />
           </Link>
         </div>
       </div>

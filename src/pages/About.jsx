@@ -1,4 +1,6 @@
 import React from 'react';
+import ciac from '../assets/Sobhani.jpeg';
+import { FaFacebook, FaLinkedin, FaGlobe } from 'react-icons/fa';  // For social media icons
 
 function About() {
   return (
@@ -15,100 +17,241 @@ function About() {
 
       {/* CIAC Director */}
       <section className="p-12 bg-white text-center">
-        <h2 className="text-4xl font-extrabold text-center text-black mb-8">CIAC Director</h2>
+        <h2 className="text-4xl font-extrabold text-black mb-8">CIAC Director</h2>
         <div className="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-extrabold text-black">Dr. John Doe</h3>
-          <p className="text-gray-700 text-lg">Director, Centre for International Affairs and Cooperation (CIAC)</p>
-          <p className="mt-4 text-gray-700">
-            Dr. John Doe is a renowned academic leader with a strong passion for global education and student empowerment. Under his leadership, SIAS has become a key player in enhancing students’ international exposure.
-          </p>
+          <img className="w-32 h-32 rounded-full mx-auto mb-4" src={ciac} alt="Dr. John Doe" />
+          <h3 className="text-2xl font-extrabold text-black">Dr. Farid Ahammad Sobhani</h3>
+          <p className="text-gray-700 text-lg">Professor. SoBE & Director, CIAC</p>
+          <div className="flex justify-center gap-6 mt-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <FaFacebook size={24} />
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin size={24} />
+            </a>
+            <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+              <FaGlobe size={24} />
+            </a>
+          </div>
         </div>
       </section>
 
       {/* Advisor Panel */}
       <section className="p-12 bg-white text-center">
-        <h2 className="text-4xl font-extrabold text-center text-black mb-8">Advisor Panel</h2>
+        <h2 className="text-4xl font-extrabold text-black mb-8">Advisor Panel</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
           <div className="bg-white p-6 rounded-lg shadow-lg">
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Prof. Alice Smith" />
             <h3 className="text-2xl font-extrabold text-black">Prof. Alice Smith</h3>
             <p className="text-gray-600">Academic Advisor</p>
-            <p className="mt-4 text-gray-700">Prof. Alice Smith is a distinguished academician and an advocate for global student mobility.</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Dr. Bob Lee" />
             <h3 className="text-2xl font-extrabold text-black">Dr. Bob Lee</h3>
             <p className="text-gray-600">International Relations Advisor</p>
-            <p className="mt-4 text-gray-700">Dr. Bob Lee is an expert in international relations, working closely with SIAS to facilitate global partnerships.</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Jordan Belford" />
             <h3 className="text-2xl font-extrabold text-black">Jordan Belford</h3>
             <p className="text-gray-600">Academic Advisor</p>
-            <p className="mt-4 text-gray-700">Prof. Alice Smith is a distinguished academician and an advocate for global student mobility.</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Core Committee Panel */}
       <section className="p-12 bg-orange-100 text-center">
-        <h2 className="text-4xl font-extrabold text-center text-black mb-8">Core Committee Panel</h2>
+        <h2 className="text-4xl font-extrabold text-black mb-8">Presidential Panel</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
           <div className="bg-white p-6 rounded-lg shadow-lg">
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Md Siam Hossain" />
             <h3 className="text-2xl font-extrabold text-black">Md Siam Hossain</h3>
             <p className="text-gray-600">President</p>
-            <p className="mt-4 text-gray-700">A passionate leader working towards enhancing SIAS’s international engagement.</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="John Doe" />
             <h3 className="text-2xl font-extrabold text-black">John Doe</h3>
             <p className="text-gray-600">Vice President</p>
-            <p className="mt-4 text-gray-700">Focused on establishing strong networks between students and global institutions.</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-extrabold text-black">Md Siam Hossain</h3>
-            <p className="text-gray-600">President</p>
-            <p className="mt-4 text-gray-700">A passionate leader working towards enhancing SIAS’s international engagement.</p>
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Emily Davis" />
+            <h3 className="text-2xl font-extrabold text-black">Emily Davis</h3>
+            <p className="text-gray-600">General Secretary</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Secretary Panel */}
       <section className="p-12 bg-orange-100 text-center">
-        <h2 className="text-4xl font-extrabold text-center text-black mb-8">Secretary Panel</h2>
+        <h2 className="text-4xl font-extrabold text-black mb-8">Secretary Panel</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
           <div className="bg-white p-6 rounded-lg shadow-lg">
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Md Zishan Showdagor" />
             <h3 className="text-2xl font-extrabold text-black">Md Zishan Showdagor</h3>
             <p className="text-gray-600">Secretary of PR & Media</p>
-            <p className="mt-4 text-gray-700">Leading media relations and content creation for SIAS, ensuring effective communication with external stakeholders.</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Jane Smith" />
             <h3 className="text-2xl font-extrabold text-black">Jane Smith</h3>
             <p className="text-gray-600">Secretary of Events</p>
-            <p className="mt-4 text-gray-700">Responsible for organizing and coordinating key international events under the guidance of CIAC.</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Rohan Jabed" />
             <h3 className="text-2xl font-extrabold text-black">Rohan Jabed</h3>
-            <p className="text-gray-600">Secretary of Events</p>
-            <p className="mt-4 text-gray-700">Responsible for organizing and coordinating key international events under the guidance of CIAC.</p>
+            <p className="text-gray-600">Secretary of Logistics</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Executive Panel */}
       <section className="p-12 bg-orange-100 text-center">
-        <h2 className="text-4xl font-extrabold text-center text-black mb-8">Executive Panel</h2>
+        <h2 className="text-4xl font-extrabold text-black mb-8">Executive Panel</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
           <div className="bg-white p-6 rounded-lg shadow-lg">
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Sarah Ahmed" />
             <h3 className="text-2xl font-extrabold text-black">Sarah Ahmed</h3>
             <p className="text-gray-600">Executive Member</p>
-            <p className="mt-4 text-gray-700">An active member involved in international student outreach and partnership building.</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Ali Rahman" />
             <h3 className="text-2xl font-extrabold text-black">Ali Rahman</h3>
             <p className="text-gray-600">Executive Member</p>
-            <p className="mt-4 text-gray-700">Focused on creating international learning opportunities for UIU students.</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-extrabold text-black">Sarah Ahmed</h3>
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Fatima Noor" />
+            <h3 className="text-2xl font-extrabold text-black">Fatima Noor</h3>
             <p className="text-gray-600">Executive Member</p>
-            <p className="mt-4 text-gray-700">An active member involved in international student outreach and partnership building.</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -118,25 +261,57 @@ function About() {
         <h2 className="text-4xl font-extrabold mb-6">SIAS Notable Alumni</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
           <div className="bg-white p-6 rounded-lg shadow-lg">
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Shamsul Huda" />
             <h3 className="text-2xl font-extrabold text-black">Shamsul Huda</h3>
             <p className="text-gray-600">Alumni, Former President</p>
-            <p className="mt-4 text-gray-700">Shamsul Huda has successfully represented SIAS at multiple international student conferences.</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Niaj Ahmed" />
             <h3 className="text-2xl font-extrabold text-black">Niaj Ahmed</h3>
             <p className="text-gray-600">Alumni, Former Secretary</p>
-            <p className="mt-4 text-gray-700">A leader in international education, Nusrat now works with global education networks.</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
+            <img className="w-32 h-32 rounded-full mx-auto mb-4" src="path-to-image" alt="Nusrat Jahan" />
             <h3 className="text-2xl font-extrabold text-black">Nusrat Jahan</h3>
             <p className="text-gray-600">Alumni, Former Secretary</p>
-            <p className="mt-4 text-gray-700">A leader in international education, Nusrat now works with global education networks.</p>
+            <div className="flex justify-center gap-6 mt-4">
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                <FaFacebook size={24} />
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <FaLinkedin size={24} />
+              </a>
+              <a href="https://www.website.com" target="_blank" rel="noopener noreferrer">
+                <FaGlobe size={24} />
+              </a>
+            </div>
           </div>
         </div>
       </section>
-
-      {/* Featured Events */}
-      <section className="p-12 bg-white text-center">
+       {/* Featured Events */}
+       <section className="p-12 bg-white text-center">
         <h2 className="text-4xl font-extrabold mb-6">Featured Events</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 p-6">
           <div className="bg-white p-6 rounded-lg shadow-lg">
@@ -145,14 +320,13 @@ function About() {
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h3 className="text-2xl font-semibold text-orange-600">International Networking Night</h3>
-            <p className="text-gray-600">A networking event to help students build relationships with international professionals.</p>
+            <p className="text-gray-600">A networking event for students to meet global academic and industry leaders.</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-semibold text-orange-600">Global Education Fair</h3>
-            <p className="text-gray-600">An event that connects students with top universities around the world for study opportunities.</p>
+            <h3 className="text-2xl font-semibold text-orange-600">Cultural Exchange Program</h3>
+            <p className="text-gray-600">Promotes cultural understanding and builds global friendships through student exchange initiatives.</p>
           </div>
         </div>
-        
       </section>
 
     </div>
